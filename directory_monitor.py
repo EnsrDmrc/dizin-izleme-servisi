@@ -2,6 +2,7 @@ import time
 import json
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+import os
 
 class DirectoryMonitor(FileSystemEventHandler):
     def __init__(self, log_file):
@@ -29,10 +30,14 @@ class DirectoryMonitor(FileSystemEventHandler):
     def on_moved(self, event):
         self.log_change("moved", f"{event.src_path} -> {event.dest_path}")
 
+
 if __name__ == "__main__":
     log_dir = "/home/ubuntu/bsm/logs"
     monitor_dir = "/home/ubuntu/bsm/test"
     log_file = f"{log_dir}/changes.json"
+
+    # Log dizini yoksa oluştur.
+    os.makedirs(log_dir, exist_ok=True)
 
     event_handler = DirectoryMonitor(log_file)
     observer = Observer()
@@ -40,9 +45,12 @@ if __name__ == "__main__":
 
     print("Monitoring started...")
     observer.start()
+
     try:
         while True:
             time.sleep(1)
     except KeyboardInterrupt:
         observer.stop()
+
     observer.join()
+
