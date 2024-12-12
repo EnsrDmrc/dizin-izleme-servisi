@@ -1,0 +1,9 @@
+{"event_type": "modified", "src_path": "/home/ubuntu/bsm/test/test_file.txt", "timestamp": "2024-12-12 19:38:40"}
+{"event_type": "modified", "src_path": "/home/ubuntu/bsm/test", "timestamp": "2024-12-12 19:38:40"}
+{"event_type": "modified", "src_path": "/home/ubuntu/bsm/test/test_file.txt", "timestamp": "2024-12-12 19:59:29"}
+{"event_type": "modified", "src_path": "/home/ubuntu/bsm/test", "timestamp": "2024-12-12 19:59:29"}
+{"event_type": "modified", "src_path": "/home/ubuntu/bsm/test/test_file.txt", "timestamp": "2024-12-12 19:59:38"}
+{"event_type": "modified", "src_path": "/home/ubuntu/bsm/test/test_file.txt", "timestamp": "2024-12-12 19:59:38"}
+{"event_type": "modified", "src_path": "/home/ubuntu/bsm/test", "timestamp": "2024-12-12 19:59:38"}
+{"event_type": "deleted", "src_path": "/home/ubuntu/bsm/test/test_file.txt", "timestamp": "2024-12-12 19:59:46"}
+{"event_type": "modified", "src_path": "/home/ubuntu/bsm/test", "timestamp": "2024-12-12 19:59:46"}
